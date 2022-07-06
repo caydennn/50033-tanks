@@ -7,7 +7,7 @@ public class TankHealth : MonoBehaviour
 
     public bool godMode = false;
 
-    public GameConstants gameConstants;
+    public GameValues gameValues;
 
     public Slider m_Slider;
 
@@ -85,10 +85,10 @@ public class TankHealth : MonoBehaviour
             if (shooter.tag == "Player" && gameObject.tag == "Enemy")
             {
                 // only increase the score if the shooter is the player
-                gameConstants.playerScore += 1;
-                if (gameConstants.playerScore > gameConstants.highScore)
+                gameValues.playerScore += 1;
+                if (gameValues.playerScore > gameValues.highScore)
                 {
-                    gameConstants.highScore = gameConstants.playerScore;
+                    gameValues.highScore = gameValues.playerScore;
                 }
             }
 
@@ -135,7 +135,7 @@ public class TankHealth : MonoBehaviour
             // Enemies can respawn indefinitely
             // wait for a few seconds
             // then respawn
-            Invoke("_Respawn", gameConstants.enemyRespawnTime);
+            Invoke("_Respawn", gameValues.enemyRespawnTime);
             gameObject.SetActive(false);
         }
 
@@ -147,12 +147,12 @@ public class TankHealth : MonoBehaviour
         // need to decrement player lives
         // if player lives is 0, game over
         // if player lives is > 0, respawn player
-        gameConstants.playerLives -= 1;
-        if (gameConstants.playerLives <= 0)
+        gameValues.playerLives -= 1;
+        if (gameValues.playerLives <= 0)
         {
             gameObject.SetActive(false);
 
-            gameConstants.gameOver = true;
+            gameValues.gameOver = true;
         }
         else
         {

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 765a10f054ac942d9bd22925df5dbd23, type: 3}
-  m_Name: GameConstants
+  m_Name: GameValues
   m_EditorClassIdentifier: 
-  playerLives: 1
+  playerLives: 3
   gameOver: 0
   enemyRespawnTime: 1
   playerScore: 0
-  highScore: 10
+  highScore: 3
   level_threshold_base: 5

@@ -10642,13 +10642,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_StartingHealth: 100
-  gameConstants: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
+  godMode: 0
+  gameValues: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
   m_Slider: {fileID: 11482748}
   m_FillImage: {fileID: 11404512}
   healthBar: {fileID: 0}
   m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
   m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
   m_ExplosionPrefab: {fileID: 151086, guid: ee49a9a8678ecf8468eb488e1ac8d42b, type: 3}
+  tankManager:
+    m_PlayerColor: {r: 0, g: 0, b: 0, a: 0}
+    m_SpawnPoint: {fileID: 0}
+    m_PlayerNumber: 0
+    m_ColoredPlayerText: 
+    m_Instance: {fileID: 0}
+    m_Wins: 0
 --- !u!114 &114705808874343242
 MonoBehaviour:
   m_ObjectHideFlags: 0

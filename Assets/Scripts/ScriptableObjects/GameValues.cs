@@ -4,11 +4,11 @@ using UnityEngine;
 
 [
     CreateAssetMenu(
-        fileName = "GameConstants",
-        menuName = "Constants/GameConstants",
+        fileName = "GameValues",
+        menuName = "GameValues/GameValues",
         order = 0)
 ]
-public class GameConstants : ScriptableObject
+public class GameValues : ScriptableObject
 {
     public int playerLives;
 

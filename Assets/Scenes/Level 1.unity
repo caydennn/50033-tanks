@@ -538,7 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1204746202}
   playerLivesText: {fileID: 1824702543}
-  gameConstants: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
+  gameValues: {fileID: 0}
 --- !u!1 &400458580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   - {fileID: 1435667194}
   - {fileID: 186534019}
   - {fileID: 400458581}
-  gameConstants: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
+  gameValues: {fileID: 0}
 --- !u!4 &1306993284
 Transform:
   m_ObjectHideFlags: 0
@@ -1466,6 +1466,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499016024553443308, guid: b7243a3b20b54824fa533465e5053ce3,
+        type: 3}
+      propertyPath: gradient.ctime0
+      value: 28720
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499016024553443308, guid: b7243a3b20b54824fa533465e5053ce3,
+        type: 3}
+      propertyPath: gradient.key3.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499016024553443308, guid: b7243a3b20b54824fa533465e5053ce3,
+        type: 3}
+      propertyPath: gradient.key3.r
+      value: 0.20064259
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7243a3b20b54824fa533465e5053ce3, type: 3}

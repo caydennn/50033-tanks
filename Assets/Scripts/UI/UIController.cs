@@ -11,7 +11,7 @@ public class UIController : MonoBehaviour
 
 
 
-    public GameConstants gameConstants;
+    public GameValues gameValues;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,8 @@ public class UIController : MonoBehaviour
     {
         // TimeSpan timeSpan = TimeSpan.FromSeconds(gameState.gameTime);
         // gameTimeText.text = timeSpan.ToString("m':'ss");
-        scoreText.text = "Score: " + gameConstants.playerScore.ToString();
-        playerLivesText.text = "Lives Left: " + gameConstants.playerLives.ToString();
+        scoreText.text = "Score: " + gameValues.playerScore.ToString();
+        playerLivesText.text = "Lives Left: " + gameValues.playerLives.ToString();
        
     }
 }

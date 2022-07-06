@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     public List<Transform> wayPointsForAI;
 
-    public GameConstants gameConstants;
+    public GameValues gameValues;
 
     private int m_RoundNumber;
 
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         m_EndWait = new WaitForSeconds(m_EndDelay);
 
         // scale the threshold based on the current level
-        levelThreshold = SceneManager.GetActiveScene().buildIndex * gameConstants.level_threshold_base;
+        levelThreshold = SceneManager.GetActiveScene().buildIndex * gameValues.level_threshold_base;
 
         SpawnAllTanks();
         SetCameraTargets();
@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
 
         if (
             (
-            gameConstants.playerScore >= levelThreshold &&
+            gameValues.playerScore >= levelThreshold &&
             SceneManager.GetActiveScene().buildIndex <
             SceneManager.sceneCountInBuildSettings
             )
@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
 
         m_MessageText.text = string.Empty;
 
-        while (!gameConstants.gameOver) yield return null;
+        while (!gameValues.gameOver) yield return null;
         // while (!OneTankLeft()) yield return null;
     }
 
@@ -138,7 +138,6 @@ public class GameManager : MonoBehaviour
     {
         DisableTankControl();
 
-        // todo: change this
         m_MessageText.text = MyEndMessage();
         yield return m_EndWait;
 
@@ -190,14 +189,14 @@ public class GameManager : MonoBehaviour
     private string MyEndMessage()
     {
         StringBuilder sb = new StringBuilder();
-        if (gameConstants.playerScore < levelThreshold)
+        if (gameValues.playerScore < levelThreshold)
         {
             sb.Append("Game Over!\n");
             sb.Append("\n");
-            sb.Append("You scored: " + gameConstants.playerScore + "\n");
+            sb.Append("You scored: " + gameValues.playerScore + "\n");
             sb.Append("\n");
 
-            sb.Append("Your High Score: " + gameConstants.highScore + "\n");
+            sb.Append("Your High Score: " + gameValues.highScore + "\n");
             sb.Append("\n");
             sb
                 .Append("You need at least: " +
@@ -209,9 +208,9 @@ public class GameManager : MonoBehaviour
         {
             sb.Append("Nice job! You made it to the next level!\n");
             sb.Append("\n");
-            sb.Append("You scored: " + gameConstants.playerScore + "\n");
+            sb.Append("You scored: " + gameValues.playerScore + "\n");
             sb.Append("\n");
-            sb.Append("Your High Score: " + gameConstants.highScore + "\n");
+            sb.Append("Your High Score: " + gameValues.highScore + "\n");
             sb.Append("\n");
         }
 
@@ -253,8 +252,8 @@ public class GameManager : MonoBehaviour
 
     private void ResetConstants()
     {
-        gameConstants.playerLives = 1;
-        gameConstants.playerScore = 0;
-        gameConstants.gameOver = false;
+        gameValues.playerLives = 1;
+        gameValues.playerScore = 0;
+        gameValues.gameOver = false;
     }
 }
