@@ -42,7 +42,7 @@ public class TankHealth : MonoBehaviour
         // find object with tag HealthBar
         // check if current object is tag player
         // if so, set healthbar to this object
-        // if not, set healthbar to null
+        // if not, set healthbar to null , enemies have no healthbar
         if (gameObject.tag == "Player")
         {
             healthBar =

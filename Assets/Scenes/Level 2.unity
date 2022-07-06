@@ -538,7 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1204746202}
   playerLivesText: {fileID: 1824702543}
-  gameConstants: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
+  gameValues: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
 --- !u!1 &400458580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   - {fileID: 400458581}
   - {fileID: 901575948}
   - {fileID: 887819483}
-  gameConstants: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
+  gameValues: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
 --- !u!4 &1306993284
 Transform:
   m_ObjectHideFlags: 0

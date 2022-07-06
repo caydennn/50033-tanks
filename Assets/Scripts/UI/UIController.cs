@@ -7,9 +7,8 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     public Text scoreText;
+
     public Text playerLivesText;
-
-
 
     public GameValues gameValues;
 
@@ -21,10 +20,8 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TimeSpan timeSpan = TimeSpan.FromSeconds(gameState.gameTime);
-        // gameTimeText.text = timeSpan.ToString("m':'ss");
         scoreText.text = "Score: " + gameValues.playerScore.ToString();
-        playerLivesText.text = "Lives Left: " + gameValues.playerLives.ToString();
-       
+        playerLivesText.text =
+            "Lives Left: " + gameValues.playerLives.ToString();
     }
 }
