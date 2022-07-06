@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 18e521b6f8588c44f9e68c769421eb47
-timeCreated: 1432810110
-licenseType: Store
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_CameraControl: {instanceID: 0}
+  - m_MessageText: {instanceID: 0}
+  - gameConstants: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

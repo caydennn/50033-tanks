@@ -15,6 +15,7 @@ public class TankManager
 
 
     private TankMovement m_Movement;
+    private TankHealth m_Health;
     private TankShooting m_Shooting;
     private GameObject m_CanvasGameObject;
     private StateController m_StateController;
@@ -23,7 +24,10 @@ public class TankManager
     {
         m_StateController = m_Instance.GetComponent<StateController>();
         m_StateController.SetupAI(true, wayPointList);
+        m_Health = m_Instance.GetComponent<TankHealth>();
 
+
+        m_Health.tankManager = this;
         m_Shooting = m_Instance.GetComponent<TankShooting>();
         m_Shooting.m_PlayerNumber = m_PlayerNumber;
 
@@ -36,10 +40,17 @@ public class TankManager
     }
 
 
-    public void SetupPlayerTank()
+    public void SetupPlayerTank(bool godMode)
     {
         m_Movement = m_Instance.GetComponent<TankMovement>();
         m_Shooting = m_Instance.GetComponent<TankShooting>();
+        m_Health = m_Instance.GetComponent<TankHealth>();
+
+
+        m_Health.tankManager = this;
+        m_Health.godMode = godMode;
+
+
         m_CanvasGameObject = m_Instance.GetComponentInChildren<Canvas>().gameObject;
 
         m_Movement.m_PlayerNumber = m_PlayerNumber;
@@ -75,11 +86,13 @@ public class TankManager
 
     public void Reset()
     {
+        Debug.Log("Reset called");
         m_Instance.transform.position = m_SpawnPoint.position;
         m_Instance.transform.rotation = m_SpawnPoint.rotation;
 
         m_Instance.SetActive(false);
         m_Instance.SetActive(true);
     }
+
 
 }

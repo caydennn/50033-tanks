@@ -10357,7 +10357,7 @@ GameObject:
   - component: {fileID: 114939632423205664}
   m_Layer: 9
   m_Name: AITankChaser
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10642,8 +10642,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_StartingHealth: 100
+  gameConstants: {fileID: 11400000, guid: e7e1e09679c8a427789a5d7bff81ac15, type: 2}
   m_Slider: {fileID: 11482748}
   m_FillImage: {fileID: 11404512}
+  healthBar: {fileID: 0}
   m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
   m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
   m_ExplosionPrefab: {fileID: 151086, guid: ee49a9a8678ecf8468eb488e1ac8d42b, type: 3}
