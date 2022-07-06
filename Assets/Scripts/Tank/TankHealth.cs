@@ -79,7 +79,7 @@ public class TankHealth : MonoBehaviour
 
         SetHealthUI();
 
-        Debug.Log("shooter: " + shooter.name);
+        // Debug.Log("shooter: " + shooter.name);
         if (m_CurrentHealth <= 0f && !m_Dead)
         {
             if (shooter.tag == "Player" && gameObject.tag == "Enemy")
@@ -101,7 +101,7 @@ public class TankHealth : MonoBehaviour
         // Adjust the value and colour of the slider.
         if (healthBar != null)
         {
-            Debug.Log("Player health; " + m_CurrentHealth);
+            // Debug.Log("Player health; " + m_CurrentHealth);
             healthBar.SetHealth((int) m_CurrentHealth);
         }
         else

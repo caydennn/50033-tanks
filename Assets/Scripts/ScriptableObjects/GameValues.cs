@@ -11,6 +11,7 @@ using UnityEngine;
 public class GameValues : ScriptableObject
 {
     public int playerLives;
+    public int maxPlayerLives;
 
     public bool gameOver;
 

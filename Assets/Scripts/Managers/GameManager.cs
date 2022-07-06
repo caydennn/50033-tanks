@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public Text m_MessageText;
 
+
+
     public GameObject[] m_TankPrefabs;
 
     public TankManager[] m_Tanks;
@@ -43,7 +45,9 @@ public class GameManager : MonoBehaviour
         m_EndWait = new WaitForSeconds(m_EndDelay);
 
         // scale the threshold based on the current level
-        levelThreshold = SceneManager.GetActiveScene().buildIndex * gameValues.level_threshold_base;
+        levelThreshold =
+            SceneManager.GetActiveScene().buildIndex *
+            gameValues.level_threshold_base;
 
         SpawnAllTanks();
         SetCameraTargets();
@@ -252,7 +256,7 @@ public class GameManager : MonoBehaviour
 
     private void ResetConstants()
     {
-        gameValues.playerLives = 1;
+        gameValues.playerLives = gameValues.maxPlayerLives;
         gameValues.playerScore = 0;
         gameValues.gameOver = false;
     }

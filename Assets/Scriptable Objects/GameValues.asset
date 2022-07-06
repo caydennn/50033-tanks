@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GameValues
   m_EditorClassIdentifier: 
   playerLives: 3
+  maxPlayerLives: 3
   gameOver: 0
   enemyRespawnTime: 1
   playerScore: 0
